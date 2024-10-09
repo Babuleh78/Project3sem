@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="8dp"
+
+    >
+
+    <!-- ImageView с фоном -->
+    <ImageView
+        android:id="@+id/gymdrawback"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:radius="3dp"
+        android:src="@drawable/gymbaseback"
+        android:scaleType="centerCrop" /> <!-- Убедитесь, что у вас есть правильный ресурс -->
+
+    <!-- Контент поверх ImageView -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/metro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="М. Строгино"
+            android:textSize="20sp"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/holo_blue_light" />
+
+        <TextView
+            android:id="@+id/metres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="-27dp"
+            android:text="500м"
+
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bath"
+            android:text="Сауна"
+            style="@style/CustomTextView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/massage"
+            android:text="Массаж"
+            style="@style/CustomTextView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pool"
+            android:text="Бассейн"
+            style="@style/CustomTextView" />
+
+    </LinearLayout>
+
+</FrameLayout>
