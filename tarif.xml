@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="8dp"
+
+    >
+
+    <!-- ImageView с фоном -->
+    <ImageView
+        android:id="@+id/tarif_back_color"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:radius="3dp"
+        android:background="@drawable/back_for_tarif"
+        android:scaleType="centerCrop" /> <!-- Убедитесь, что у вас есть правильный ресурс -->
+
+    <!-- Контент поверх ImageView -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tarifName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Имя тарифа"
+            android:textSize="40sp"
+            android:layout_gravity="center"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/tarifInfo"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/teal_200"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textSize="20sp"
+            android:text="О тарифе"
+            >
+
+        </TextView>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tarifCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/teal_200"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textSize="20sp"
+            android:text="3000р"
+            >
+
+        </TextView>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tarifCell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textSize="20sp"
+            android:text="Акция!"
+            >
+
+        </TextView>
+
+
+    </LinearLayout>
+
+</FrameLayout>
