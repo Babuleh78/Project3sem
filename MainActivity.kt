@@ -1,7 +1,10 @@
 package com.example.fitness
 
+import TrainerAdapter
 import android.os.Bundle
+import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ListView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,17 +22,26 @@ class MainActivity : ComponentActivity() {
     private lateinit var tarifAdapter: TarifAdapter
     private lateinit var tarifList: List<Tarif>
     private lateinit var butt: Button
+    private lateinit var trainerView: ListView
+    private lateinit var trainerAdapter: TrainerAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.gym_info)
 
         butt = findViewById(R.id.buttonfortest)
         butt.setOnClickListener(){
-            setContentView(R.layout.tarif_info)
-            tarifAdapter = TarifAdapter(this, tarifList)
-            tarifRecyclerView = findViewById(R.id.TarifRecyclerView)
-            tarifRecyclerView.layoutManager = LinearLayoutManager(this)
-            tarifRecyclerView.adapter = tarifAdapter
+            setContentView(R.layout.trainer_info)
+                trainerView = findViewById(R.id.TrainerListView)
+                val videoUrls = listOf("https://www.youtube.com/watch?v=GX9JGzzT7jw") // Здесь ваши URL видео
+                trainerAdapter = TrainerAdapter(this, videoUrls)
+
+                trainerView.adapter = trainerAdapter
+
+//            setContentView(R.layout.tarif_info)
+//            tarifAdapter = TarifAdapter(this, tarifList)
+//            tarifRecyclerView = findViewById(R.id.TarifRecyclerView)
+//            tarifRecyclerView.layoutManager = LinearLayoutManager(this)
+//            tarifRecyclerView.adapter = tarifAdapter
         }
         gymList = listOf(
             Gym("Строгино", true, true, true),
