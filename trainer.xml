@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="8dp"
+
+    >
+
+    <!-- ImageView с фоном -->
+    <!-- Убедитесь, что у вас есть правильный ресурс -->
+
+    <!-- Контент поверх ImageView -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/back_for_tarif"
+        android:radius="3dp"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+        <TextView
+            android:id="@+id/trainername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Название упражнения"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            android:layout_gravity="center"
+            />
+        <VideoView
+            android:id="@+id/videotrain"
+            android:layout_width="560dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            />
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>
