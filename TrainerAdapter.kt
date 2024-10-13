@@ -1,4 +1,5 @@
 import android.content.Context
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,27 +24,9 @@ class TrainerAdapter(private val context: Context, private val videoList: List<S
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val view: View = convertView ?: LayoutInflater.from(context).inflate(R.layout.trainer, parent, false)
         val videoView: VideoView = view.findViewById(R.id.videotrain)
-
-        // Остановка предыдущего видео, если оно было запущено
-        if (videoView.isPlaying) {
-            videoView.stopPlayback()
-        }
-
-        // Установка источника видео
-        videoView.setVideoPath(videoList[position])
-
-        // Опционально: для предотвращения постоянного воссоздания, можно установить слушателя для завершения
-        videoView.setOnCompletionListener {
-            // Действие при завершении воспроизведения (например, перезапуск или остановка)
-            videoView.stopPlayback()
-        }
-
-        // Важно: вы можете добавить управление воспроизведением за пределами getView
-        // Если элемент становится видимым, запускайте видео,
-        // иначе останавливайте его, когда элемент становится невидимым
-
-        // Примечание: управление видимостью может быть реализовано в getView на основе других условий или в классе активности/фрагмента.
-
+        val uri = Uri.parse("android.resource://${context.packageName}/${R.raw.acdcdc}")
+        videoView.setVideoURI(uri)
+        videoView.start()
         return view
     }
 
