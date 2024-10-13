@@ -2,11 +2,9 @@ package com.example.fitness
 
 import TrainerAdapter
 import android.os.Bundle
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ListView
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitness.ui.theme.Gym
@@ -32,7 +30,8 @@ class MainActivity : ComponentActivity() {
         butt.setOnClickListener(){
             setContentView(R.layout.trainer_info)
                 trainerView = findViewById(R.id.TrainerListView)
-                val videoUrls = listOf("https://www.youtube.com/watch?v=GX9JGzzT7jw") // Здесь ваши URL видео
+
+                val videoUrls = listOf("android.resourse://" + packageName + "/" + R.raw.acdcdc)
                 trainerAdapter = TrainerAdapter(this, videoUrls)
 
                 trainerView.adapter = trainerAdapter
