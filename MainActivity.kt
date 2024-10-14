@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
         }
         gymList = listOf(
             Gym("Строгино", true, true, true),
-            // Добавьте дополнительные элементы по необходимости
+
         )
         tarifList = listOf(
             Tarif("Стандарт", "Пошел нахуй", 78, "стоит 300 рэ", "Акций нихуя нет")
