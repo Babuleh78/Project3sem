@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
@@ -15,7 +15,7 @@
             android:layout_height="200dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="100dp"
-            android:src="@drawable/gymbaseback" />
+            android:src="@drawable/kapusta" />
 
         <TextView
             android:id="@+id/product_text"
@@ -29,11 +29,14 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/product_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="106dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="50dp"
             android:orientation="horizontal"
             tools:listitem="@layout/product" />
 
+
     </LinearLayout>
 
-</HorizontalScrollView>
+</ScrollView>
