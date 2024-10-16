@@ -34,8 +34,6 @@ class ProductAdapter(private val context: Context, private val productList: List
         if (position >= 0 && position < productList.size) {
             val currentProduct = productList[position]
             holder.image.setImageResource(currentProduct.imageResId)
-
-            // Обработчик нажатия на кнопку
             holder.buttonAddToCart.setOnClickListener {
                 listener.onProductClick(currentProduct)
             }
