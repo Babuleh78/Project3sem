@@ -21,6 +21,7 @@ import org.w3c.dom.Text
 interface OnProductClickListener {
     fun onProductClick(product: Product)
 }
+//a lot of shit
 
 
 class MainActivity : ComponentActivity(), OnProductClickListener{
