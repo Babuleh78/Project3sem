@@ -9,7 +9,6 @@ import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitness.R
 import com.example.fitness.ui.theme.GymAdapter.GymViewHolder
-
 class TarifAdapter(val context: Context, private val TarifList: List<Tarif>) : RecyclerView.Adapter<TarifAdapter.TarifViewHolder>(){
     class TarifViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val name: TextView = itemView.findViewById(R.id.tarifName)
